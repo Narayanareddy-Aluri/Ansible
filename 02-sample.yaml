@@ -14,6 +14,7 @@
         msg: "server is accessible"
 - name: install nginx
   hosts: web
+  bacome: yes
   tasks:
     - name: installing nginx
       ansible.buitin.package:
