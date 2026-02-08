@@ -10,7 +10,5 @@
     - name: ping the server
       ansible.builtin.ping:
     - name: print ping message success
-      ansible.bultin.debug:
+      ansible.builtin.debug:
         msg: "server is accessible"
-
-  
