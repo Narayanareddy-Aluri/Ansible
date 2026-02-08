@@ -1,10 +1,10 @@
-- name: learning variables
-  hosts: web
+- name: varibles example
+  hosts: local
   vars:
-    course: "Devops"
-    duration: "140hrs"
-    trainer: "Reddy"
+    course: DevOps
+    duration: 150hr
+    trainer: reddy
   tasks:
-  - name: print variables
-    ansible.builtin.debug:
-      msg: "course is :{{course}}, trainer is:{{trainer}}"
+    - name: devops course details
+      ansible.builtin.debug:
+        msg: "course name is:{{course}}, trainer name is :{{trainer}}"
