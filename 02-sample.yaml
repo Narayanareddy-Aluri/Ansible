@@ -1,5 +1,5 @@
 - name: print hello world
-  hosts: local,web
+  hosts: local
   tasks:
     - name: print hello message
       ansible.builtin.debug:
@@ -12,3 +12,11 @@
     - name: print ping message success
       ansible.builtin.debug:
         msg: "server is accessible"
+- name: install nginx
+  hosts: web
+  tasks:
+    - name: installing nginx
+      ansible.buitin.package:
+        name: nginx
+        state: present
+       
