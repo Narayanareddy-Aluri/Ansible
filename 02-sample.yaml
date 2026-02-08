@@ -20,4 +20,7 @@
       ansible.builtin.package:
         name: nginx
         state: present
-       
+    - name: uninstalling nginx
+      ansible.builtin.package:
+        name: nginx
+        state: absent
