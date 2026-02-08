@@ -7,8 +7,10 @@
     - name: print hello message
       ansible.builtin.debug:
         msg: hello my love
-  tasks:
     - name: ping the server
       ansible.builtin.ping:
+    - name: print ping message success
+      ansible.bultin.debug:
+        msg: "server is accessible"
 
   
