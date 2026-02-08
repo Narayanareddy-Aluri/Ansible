@@ -17,7 +17,7 @@
   bacome: yes
   tasks:
     - name: installing nginx
-      ansible.buitin.package:
+      ansible.builtin.package:
         name: nginx
         state: present
        
