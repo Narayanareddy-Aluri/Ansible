@@ -2,22 +2,23 @@
   hosts: local
   connection: local
   vars:
-    PROGRAME: "Devops with AWS" #string
-    duration: 140 #int/number
-    IS_LIVE: true #boolean/bool
-    DETAILS:  #map/dictionary
+    PROGRAME: "Devops with AWS"   # string
+    duration: 140                # int / number
+    IS_LIVE: true                # boolean
+    DETAILS:                     # map / dictionary
       MONTHS: 4
       TRAINER: "Shiva"
-    TOPICS: #list it will start with - or []
-    - linux
-    - shell
-    - Ansible
+    TOPICS:                      # list
+      - linux
+      - shell
+      - Ansible
+
   tasks:
-  - name: print variables
-    ansible.builtin.debug:
-      msg: |
-      Programe: {{PROGRAME}}
-      duration: {{duration}}
-      details: {{DETAILS}}
-      topics: {{TOPICS}}
-      is_live: {{IS_LIVE}}
+    - name: print variables
+      ansible.builtin.debug:
+        msg: |
+          Programe: {{ PROGRAME }}
+          duration: {{ duration }}
+          details: {{ DETAILS }}
+          topics: {{ TOPICS }}
+          is_live: {{ IS_LIVE }}
