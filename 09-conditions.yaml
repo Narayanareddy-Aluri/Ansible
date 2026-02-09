@@ -1,6 +1,6 @@
 - name: conditions in ansible
   hosts: local
-  conditions: local
+  connection: local
   vars:
     IS_LIVE: true
   tasks:
