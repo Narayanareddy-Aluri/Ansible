@@ -11,4 +11,4 @@
   - name: check live or not
     ansible.builtin.debug:
       msg: "No, it is not live"
-    when: IS_LIVE
+    when: not IS_LIVE
