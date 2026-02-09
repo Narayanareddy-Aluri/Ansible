@@ -2,13 +2,15 @@
   hosts: local
   connection: local
   vars:
-    IS_LIVE: 
+    IS_LIVE: false   # default value
+
   tasks:
-  - name: check live or not
-    ansible.builtin.debug:
-      msg: "yes, it is live"
-    when: IS_LIVE
-  - name: check live or not
-    ansible.builtin.debug:
-      msg: "No, it is not live"
-    when: not (IS_LIVE | bool)
+    - name: check live or not
+      ansible.builtin.debug:
+        msg: "yes, it is live"
+      when: IS_LIVE | bool
+
+    - name: check live or not
+      ansible.builtin.debug:
+        msg: "No, it is not live"
+      when: not (IS_LIVE | bool)
