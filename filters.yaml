@@ -4,14 +4,14 @@
   vars:
     Topics: Ansible, linux, shell
     tagsMap:
-    name: ansible
-    project: roboshop
-    component: catalogue
+      name: ansible
+      project: roboshop
+      component: catalogue
   tasks:
   - name: convert into list
     ansible.builtin.debug:
       msg: "{{ Topics | split (',') }}"  # convert string to list
-      
+
   - name: convert map to list
     ansible.builtin.debug:
       msg: "{{ tagsMap | dict2items }}"
